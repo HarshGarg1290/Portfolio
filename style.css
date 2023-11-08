@@ -531,7 +531,6 @@ section .button button:hover {
   }
   .certificates.boxes .box {
     margin: 20px 0;
-    flex-direction: column;
     width: 100%;
   }
   .contact .text {
