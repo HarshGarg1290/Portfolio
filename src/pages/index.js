@@ -17,7 +17,7 @@ export default function Home() {
 	const [activeSection, setActiveSection] = useState("about");
 	const [mounted, setMounted] = useState(false);
 	const lenis = useLenis();
-	console.log(lenis); // Check if lenis is not null
+
 
 	const observerOptions = {
 		threshold: 0.5,
