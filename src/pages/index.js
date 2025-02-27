@@ -69,7 +69,7 @@ export default function Home() {
 
 	return (
 	
-			<main className="min-h-screen font-spacegrotesk bg-navy-900 text-gray-300 relative overflow-x-hidden">
+			<main className="min-h-screen font-spacegrotesk bg-navy-900 text-gray-300 relative sm:overflow-x-hidden">
 				<GeometricShapes />
 				<CustomCursor />
 				<div className="container mx-auto px-4 md:px-8 lg:px-48 py-8 sm:py-16 relative">
