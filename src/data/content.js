@@ -51,7 +51,7 @@ export const projects = [
 			"Google Maps API",
 			"PostgreSQL",
 		],
-		link: "#",
+		link: "https://github.com/aakashahpl/vimsicles",
 		image: "/api/placeholder/400/250",
 	},
 	{
@@ -59,7 +59,7 @@ export const projects = [
 		description:
 			"Developed an AI tool to generate Valorant montages using a YOLO-based object detection model trained on a custom dataset. Integrated a Flask-based web interface and Firebase database for seamless processing and storage.",
 		tech: ["YOLO", "Python", "Flask", "MoviePy", "Firebase"],
-		link: "#",
+		link: "https://github.com/HarshGarg1290/Mr.Montage",
 		image: "/api/placeholder/400/250",
 	},
 	{
@@ -67,7 +67,7 @@ export const projects = [
 		description:
 			"Developed a digital twin web app for real-time monitoring of power-generation systems. Implemented ML-based anomaly detection for efficient system tracking. Qualified for SIH'23 internal hackathon.",
 		tech: ["Python", "Machine Learning", "React", "Flask"],
-		link: "#",
+		link: "https://github.com/HarshGarg1290/SIH_INTERNAL-2023_DIGITAL_TWIN",
 		image: "/api/placeholder/400/250",
 	},
 	{
@@ -75,7 +75,7 @@ export const projects = [
 		description:
 			"Built a tourism platform that generates personalized travel itineraries based on user preferences. Finalist at Ossome Hacks conducted by SRM University, Chennai.",
 		tech: ["React", "Node.js", "Firebase", "Tailwind"],
-		link: "#",
+		link: "https://github.com/HarshGarg1290/indiaTourism",
 		image: "/api/placeholder/400/250",
 	},
 ];
