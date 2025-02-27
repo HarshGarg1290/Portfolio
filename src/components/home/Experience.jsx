@@ -13,7 +13,7 @@ export default function ExperienceSection({ experienceRef, experiences }) {
 			viewport={{ once: true }}
 			className="space-y-12"
 		>
-			<h2 className="sm:hidden text-2xl font-bold text-white">Experience</h2>
+			<h2 className="sm:hidden  text-2xl font-bold text-white">EXPERIENCE</h2>
 			<div className="space-y-12">
 				{experiences.map((exp, index) => (
 					<motion.div

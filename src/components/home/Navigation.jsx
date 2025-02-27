@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const navVariants = {
 	hidden: { opacity: 0, y: 10 },
@@ -7,8 +8,8 @@ const navVariants = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			staggerChildren: 0.15, // Smooth stagger effect
-			ease: [0.25, 1, 0.5, 1], // Cubic bezier easing
+			staggerChildren: 0.15,
+			ease: [0.25, 1, 0.5, 1],
 		},
 	},
 };
@@ -28,6 +29,18 @@ export default function Navigation({
 	handleNavClick,
 	navItems,
 }) {
+	const [isExpanded, setIsExpanded] = useState(false);
+
+	useEffect(() => {
+		// Wait for dot to reach new position before expanding
+		const timeout = setTimeout(() => setIsExpanded(true), 300);
+
+		return () => {
+			clearTimeout(timeout);
+			setIsExpanded(false); // Reset before transitioning
+		};
+	}, [activeSection]);
+
 	return (
 		<nav className="relative">
 			<motion.ul
@@ -41,10 +54,30 @@ export default function Navigation({
 						key={item.label}
 						variants={itemVariants}
 						whileHover="hover"
+						className="flex flex-row items-center gap-4"
 					>
+						{activeSection === item.label.toLowerCase() && (
+							<motion.span
+								className="bg-blue-400"
+								layoutId="activeSection"
+								transition={{
+									type: "spring",
+									stiffness: 380,
+									damping: 30,
+								}}
+								animate={{
+									width: isExpanded ? "24px" : "8px",
+									height: isExpanded ? "2px" : "8px",
+									borderRadius: isExpanded ? "0px" : "999px",
+								}}
+							/>
+						)}
 						<Link
 							href={item.href}
-							onClick={(e) => handleNavClick(e, item.href.slice(1))}
+							onClick={(e) => {
+								handleNavClick(e, item.href.slice(1));
+								setIsExpanded(false); // Shrink before movement
+							}}
 							className={`block text-sm relative transition-all ${
 								activeSection === item.label.toLowerCase()
 									? "text-white font-semibold"
@@ -52,13 +85,6 @@ export default function Navigation({
 							}`}
 						>
 							{item.label}
-							{activeSection === item.label.toLowerCase() && (
-								<motion.span
-									className="absolute -left-4 top-[7px] -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full"
-									layoutId="activeSection"
-									transition={{ type: "spring", stiffness: 380, damping: 30 }}
-								/>
-							)}
 						</Link>
 					</motion.li>
 				))}

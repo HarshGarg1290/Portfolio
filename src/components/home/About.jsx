@@ -9,14 +9,15 @@ export default function AboutSection({ aboutRef }) {
 			variants={sectionVariants}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: true }}
-			className="space-y-10 px-6  "
+			viewport={{ once: true }} // Animation triggers only once
+			className="space-y-10 text-md"
 		>
 			<motion.p
-				className="text-lg leading-relaxed text-gray-300 max-w-3xl"
+				className=" leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
+				viewport={{ once: true }} // Ensures this animation runs only once
 			>
 				I'm a{" "}
 				<span className="text-blue-400 font-semibold">
@@ -29,10 +30,11 @@ export default function AboutSection({ aboutRef }) {
 			</motion.p>
 
 			<motion.p
-				className="text-lg leading-relaxed text-gray-400 max-w-3xl"
+				className="leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+				viewport={{ once: true }} // Ensures this animation runs only once
 			>
 				Currently, I'm specializing in{" "}
 				<span className="text-blue-400 font-semibold">
@@ -45,10 +47,11 @@ export default function AboutSection({ aboutRef }) {
 			</motion.p>
 
 			<motion.p
-				className="text-lg leading-relaxed text-gray-400 max-w-3xl"
+				className=" leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+				viewport={{ once: true }} // Ensures this animation runs only once
 			>
 				My technical toolkit includes C/C++, Python, and Java for programming,
 				<span className="text-blue-400 font-semibold">
@@ -61,10 +64,11 @@ export default function AboutSection({ aboutRef }) {
 			</motion.p>
 
 			<motion.p
-				className="text-lg leading-relaxed text-gray-400 max-w-3xl"
+				className=" leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
+				viewport={{ once: true }} // Ensures this animation runs only once
 			>
 				When I'm not coding, you'll find me participating in{" "}
 				<span className="text-blue-400 font-semibold">hackathons</span>,

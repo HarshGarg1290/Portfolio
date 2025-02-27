@@ -14,7 +14,7 @@ export default function ProjectsSection({ projectsRef, projects }) {
 			className="space-y-12"
 		>
 			<h2 className="sm:hidden text-2xl font-bold text-white">
-				Featured Projects
+			PROJECTS
 			</h2>
 			<motion.div className="grid gap-8" variants={containerVariants}>
 				{projects.map((project, index) => (

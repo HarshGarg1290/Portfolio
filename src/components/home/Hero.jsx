@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
 	return (
-		<div className="space-y-6 max-w-[400px] pt-8">
+		<div className="space-y-6 max-w-[400px] sm:pt-8">
 			<motion.h1
-				className="text-4xl md:text-5xl font-bold text-white flex items-center gap-3"
+				className="text-4xl md:text-6xl font-bold text-white flex items-center gap-3"
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.2 }}
@@ -14,7 +14,7 @@ export default function Hero() {
 	
 			</motion.h1>
 			<motion.h2
-				className="text-xl md:text-2xl text-gray-400"
+				className="text-xl md:text-2xl text-gray-200 font-mono"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ delay: 0.3 }}
