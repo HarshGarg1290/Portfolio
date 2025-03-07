@@ -72,8 +72,8 @@ export default function Home() {
 			<main className="min-h-screen font-spacegrotesk bg-navy-900 text-gray-300 relative sm:overflow-x-hidden">
 				<GeometricShapes />
 				<CustomCursor />
-				<div className="container mx-auto px-4 md:px-8 lg:px-48 py-8 sm:py-16 relative">
-					<div className="flex flex-col lg:flex-row  gap-8 lg:gap-56">
+				<div className="container mx-auto px-4 md:px-8 lg:px-24 py-8 sm:py-16 relative">
+					<div className="flex flex-col lg:flex-row justify-between  gap-8 ">
 						<div className="mx-40"></div>
 						<div className="sm:fixed">
 							<Sidebar

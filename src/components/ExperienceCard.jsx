@@ -4,6 +4,7 @@ export default function ExperienceCard({
 	period,
 	description,
 	tech,
+	link,
 }) {
 	return (
 		<div className="group relative border border-gray-800 p-6 rounded-lg hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">

@@ -35,6 +35,7 @@ export const experiences = [
 			"Optimized performance and security, successfully transitioning the business online.",
 		],
 		tech: ["MERN", "Next.js", "AWS", "Tailwind", "PostgreSQL"],
+		link: "",
 	},
 ];
 
@@ -60,7 +61,7 @@ export const projects = [
 			"Developed an AI tool to generate Valorant montages using a YOLO-based object detection model trained on a custom dataset. Integrated a Flask-based web interface and Firebase database for seamless processing and storage.",
 		tech: ["YOLO", "Python", "Flask", "MoviePy", "Firebase"],
 		link: "https://github.com/HarshGarg1290/Mr.Montage",
-		image: "/api/placeholder/400/250",
+		image: "/mr.montage.png",
 	},
 	{
 		title: "Digital Twin for Powerhouse - Real-Time System Monitoring",
@@ -68,7 +69,7 @@ export const projects = [
 			"Developed a digital twin web app for real-time monitoring of power-generation systems. Implemented ML-based anomaly detection for efficient system tracking. Qualified for SIH'23 internal hackathon.",
 		tech: ["Python", "Machine Learning", "React", "Flask"],
 		link: "https://github.com/HarshGarg1290/SIH_INTERNAL-2023_DIGITAL_TWIN",
-		image: "/api/placeholder/400/250",
+		image: "/sih.png",
 	},
 	{
 		title: "Indian Tourism - AI-Based Personalized Itinerary Planner",
@@ -76,6 +77,6 @@ export const projects = [
 			"Built a tourism platform that generates personalized travel itineraries based on user preferences. Finalist at Ossome Hacks conducted by SRM University, Chennai.",
 		tech: ["React", "Node.js", "Firebase", "Tailwind"],
 		link: "https://github.com/HarshGarg1290/indiaTourism",
-		image: "/api/placeholder/400/250",
+		image: "/tourism.jpg",
 	},
 ];

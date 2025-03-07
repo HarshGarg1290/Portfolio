@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 
 export default function ProjectCard({ title, description, tech, link, image }) {
 	return (
-		<div className="group relative bg-navy-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.01] transition-all duration-300">
+		<div className="group relative  bg-navy-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.01] transition-all duration-300">
 			<div className="p-6 space-y-4">
 				<div className="flex justify-between items-start">
 					<h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
@@ -19,7 +19,11 @@ export default function ProjectCard({ title, description, tech, link, image }) {
 						<ExternalLink className="w-5 h-5" />
 					</Link>
 				</div>
-				<p className="text-gray-400">{description}</p>
+				<div className="flex flex-col sm:flex-row gap-2 ">
+					<img src={image} className=" h-[100px] w-40 border-gray-500 hover:border-blue-400 border-2 rounded-lg " alt="" />
+
+					<p className="text-gray-400 sm:pl-5">{description}</p>
+				</div>
 				<div className="flex flex-wrap gap-2 pt-4">
 					{tech.map((tech) => (
 						<span
