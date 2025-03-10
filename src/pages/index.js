@@ -1,7 +1,5 @@
-// pages/index.js
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import GeometricShapes from "../components/Shapes";
 import Sidebar from "../components/home/Sidebar";
 import AboutSection from "../components/home/About";
 import ExperienceSection from "../components/home/Experience";
@@ -11,14 +9,13 @@ import CustomCursor from "@/components/CustomCursor";
 import SmoothScrollProvider, {
 	useLenis,
 } from "@/components/shared/LenisAnimation";
-import ContactMe from "@/components/ContactMe";
-
+import LoadingScreen from "@/components/home/Loading";
 
 export default function Home() {
 	const [activeSection, setActiveSection] = useState("about");
 	const [mounted, setMounted] = useState(false);
+	const [isLoading, setIsLoading] = useState(true); // ✅ Loading state
 	const lenis = useLenis();
-
 
 	const observerOptions = {
 		threshold: 0.5,
@@ -28,6 +25,14 @@ export default function Home() {
 	const [aboutRef, aboutInView] = useInView(observerOptions);
 	const [experienceRef, experienceInView] = useInView(observerOptions);
 	const [projectsRef, projectsInView] = useInView(observerOptions);
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setIsLoading(false);
+		}, 2500); 
+
+		return () => clearTimeout(timeout);
+	}, []);
 
 	useEffect(() => {
 		const sectionStates = [
@@ -68,12 +73,15 @@ export default function Home() {
 
 	if (!mounted) return null;
 
+	if (isLoading) {
+		return <LoadingScreen />;
+	}
+
 	return (
 		<main className="min-h-screen font-spacegrotesk bg-navy-900 text-gray-300 relative sm:overflow-x-hidden">
-			<GeometricShapes />
 			<CustomCursor />
 			<div className="container mx-auto px-4 md:px-8 lg:px-24 py-2 sm:py-16 relative">
-				<div className="flex flex-col lg:flex-row justify-between  gap-6 ">
+				<div className="flex flex-col lg:flex-row justify-between  gap-6">
 					<div className="mx-40"></div>
 					<div className="sm:fixed">
 						<Sidebar
@@ -82,11 +90,9 @@ export default function Home() {
 							navItems={navItems}
 							socialLinks={socialLinks}
 						/>
-						
 					</div>
-
-					<div className="space-y-6 sm:space-y-24 max-w-2xl ">
-						<AboutSection aboutRef={aboutRef}  />
+					<div className="space-y-6 sm:space-y-24 max-w-2xl">
+						<AboutSection aboutRef={aboutRef} />
 						<ExperienceSection
 							experienceRef={experienceRef}
 							experiences={experiences}

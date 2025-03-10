@@ -9,22 +9,22 @@ export default function Hero() {
 
 	// Symbols for encoding effect (Greek, Norse, Unicode)
 	const symbols = [
-		"Ω",
-		"Δ",
-		"Ψ",
-		"π",
-		"Ϟ",
-		"Ϡ",
-		"♆",
-		"☀",
-		"Ϟ",
-		"⍑",
-		"ᚦ",
-		"ᚠ",
-		"ᛉ",
-		"♄",
-		"☽",
-		"⊕",
+		"H",
+		"a",
+		"r",
+		"s",
+		"h",
+		"G",
+		"a",
+		"r",
+		"g",
+		"h",
+		"g",
+		"r",
+		"a",
+		"s",
+		"H",
+		"G",
 	];
 
 	// Function to gradually reveal the real name

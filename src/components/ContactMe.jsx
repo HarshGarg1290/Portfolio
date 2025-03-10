@@ -58,9 +58,9 @@ const ContactMe = () => {
 	return (
 		<div className="mt-10 flex flex-col text-white">
 			{/* Animated Email Text */}
-			<div className="flex flex-row gap-2 text-lg font-mono">
-				<MailPlus />
-				<p>I Love to here from you.</p>
+			<div className="flex flex-row gap-2 text-base  sm:text-lg font-mono">
+				<MailPlus  />
+				<p>I'd love to hear from you.</p>
 			</div>
 			<p className="mt-2 text-blue-400 text-lg font-mono">{animatedEmail}</p>
 
