@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, FileText } from "lucide-react";
 
 export const socialLinks = [
 	{
@@ -15,6 +15,11 @@ export const socialLinks = [
 		icon: <Instagram className="w-6 h-6" />,
 		href: "https://www.instagram.com/harsheyss.dev",
 		label: "Instagram",
+	},
+	{
+		icon: <FileText className="w-6 h-6" />,
+		href: "/resume.pdf",
+		label: "Resume",
 	},
 ];
 
@@ -53,7 +58,7 @@ export const projects = [
 			"PostgreSQL",
 		],
 		link: "https://github.com/aakashahpl/vimsicles",
-		image: "/api/placeholder/400/250",
+		image: "/ecobin.jpg",
 	},
 	{
 		title: "Mr. Montage - AI-Powered Valorant Montage",

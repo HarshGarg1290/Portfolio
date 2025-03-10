@@ -10,7 +10,7 @@ export default function AboutSection({ aboutRef }) {
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true }} // Animation triggers only once
-			className="space-y-10 text-md text-justify"
+			className="hidden sm:block space-y-10 text-md text-justify"
 		>
 			<motion.p
 				className=" leading-relaxed text-gray-400 max-w-3xl"

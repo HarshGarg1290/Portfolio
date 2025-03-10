@@ -3,6 +3,7 @@ import gsap from "gsap";
 import Hero from "./Hero";
 import Navigation from "./Navigation";
 import SocialLink from "../SocialLinks";
+import ContactMe from "../ContactMe";
 
 export default function Sidebar({
 	activeSection,
@@ -39,7 +40,10 @@ export default function Sidebar({
 	}, []);
 
 	return (
-		<div ref={sidebarRef} className="font-ptsans space-y-12 lg:sticky lg:top-16 lg:h-fit">
+		<div
+			ref={sidebarRef}
+			className="font-ptsans space-y-8 lg:sticky lg:top-16 lg:h-fit"
+		>
 			<Hero />
 			<Navigation
 				activeSection={activeSection}
@@ -51,6 +55,7 @@ export default function Sidebar({
 					<SocialLink key={link.label} {...link} />
 				))}
 			</div>
+			<ContactMe />
 		</div>
 	);
 }

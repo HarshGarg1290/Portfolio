@@ -10,11 +10,14 @@ export default function ProjectsSection({ projectsRef, projects }) {
 			variants={sectionVariants}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: false, amount: 0.2 }} 
-			className="space-y-12"
+			viewport={{ once: false, amount: 0.2 }}
+			className="space-y-4"
 		>
-			<h2 className="sm:hidden text-2xl font-bold text-white">
-			PROJECTS
+			<h2
+				className="sm:hidden text-2xl font-bold text-white sticky top-0 z-10 
+                 backdrop-blur-lg py-4 "
+			>
+				PROJECTS
 			</h2>
 			<motion.div className="grid gap-8" variants={containerVariants}>
 				{projects.map((project, index) => (

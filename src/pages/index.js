@@ -11,6 +11,7 @@ import CustomCursor from "@/components/CustomCursor";
 import SmoothScrollProvider, {
 	useLenis,
 } from "@/components/shared/LenisAnimation";
+import ContactMe from "@/components/ContactMe";
 
 
 export default function Home() {
@@ -68,33 +69,32 @@ export default function Home() {
 	if (!mounted) return null;
 
 	return (
-	
-			<main className="min-h-screen font-spacegrotesk bg-navy-900 text-gray-300 relative sm:overflow-x-hidden">
-				<GeometricShapes />
-				<CustomCursor />
-				<div className="container mx-auto px-4 md:px-8 lg:px-24 py-8 sm:py-16 relative">
-					<div className="flex flex-col lg:flex-row justify-between  gap-8 ">
-						<div className="mx-40"></div>
-						<div className="sm:fixed">
-							<Sidebar
-								activeSection={activeSection}
-								handleNavClick={handleNavClick}
-								navItems={navItems}
-								socialLinks={socialLinks}
-							/>
-						</div>
+		<main className="min-h-screen font-spacegrotesk bg-navy-900 text-gray-300 relative sm:overflow-x-hidden">
+			<GeometricShapes />
+			<CustomCursor />
+			<div className="container mx-auto px-4 md:px-8 lg:px-24 py-8 sm:py-16 relative">
+				<div className="flex flex-col lg:flex-row justify-between  gap-8 ">
+					<div className="mx-40"></div>
+					<div className="sm:fixed">
+						<Sidebar
+							activeSection={activeSection}
+							handleNavClick={handleNavClick}
+							navItems={navItems}
+							socialLinks={socialLinks}
+						/>
+						
+					</div>
 
-						<div className="space-y-24 max-w-2xl ">
-							<AboutSection aboutRef={aboutRef} />
-							<ExperienceSection
-								experienceRef={experienceRef}
-								experiences={experiences}
-							/>
-							<ProjectsSection projectsRef={projectsRef} projects={projects} />
-						</div>
+					<div className="space-y-6 sm:space-y-24 max-w-2xl ">
+						<AboutSection aboutRef={aboutRef}  />
+						<ExperienceSection
+							experienceRef={experienceRef}
+							experiences={experiences}
+						/>
+						<ProjectsSection projectsRef={projectsRef} projects={projects} />
 					</div>
 				</div>
-			</main>
-	
+			</div>
+		</main>
 	);
 }

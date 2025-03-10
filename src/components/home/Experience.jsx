@@ -11,9 +11,16 @@ export default function ExperienceSection({ experienceRef, experiences }) {
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true }}
-			className="space-y-12"
+			className="relative space-y-4"
 		>
-			<h2 className="sm:hidden  text-2xl font-bold text-white">EXPERIENCE</h2>
+	
+			<h2
+				className="sm:hidden text-2xl font-bold text-white sticky top-0 z-10 
+                 backdrop-blur-lg py-4 "
+			>
+				EXPERIENCE
+			</h2>
+
 			<div className="space-y-12">
 				{experiences.map((exp, index) => (
 					<motion.div

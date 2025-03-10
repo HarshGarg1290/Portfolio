@@ -42,9 +42,9 @@ export default function Navigation({
 	}, [activeSection]);
 
 	return (
-		<nav className="relative">
+		<nav className="hidden sm:block relative">
 			<motion.ul
-				className="space-y-2"
+				className="space-y-1"
 				variants={navVariants}
 				initial="hidden"
 				animate="visible"
@@ -66,7 +66,7 @@ export default function Navigation({
 									damping: 30,
 								}}
 								animate={{
-									width: isExpanded ? "24px" : "8px",
+									width: isExpanded ? "72px" : "8px",
 									height: isExpanded ? "2px" : "8px",
 									borderRadius: isExpanded ? "0px" : "999px",
 								}}
