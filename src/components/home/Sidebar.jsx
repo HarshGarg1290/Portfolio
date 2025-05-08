@@ -33,7 +33,7 @@ export default function Sidebar({
 				opacity: 1,
 				y: 0,
 				duration: 0.6,
-				delay: 0.5, // Slight delay for staggered effect
+				delay: 0.5, 
 				ease: "power2.out",
 			}
 		);
