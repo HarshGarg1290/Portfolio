@@ -10,7 +10,7 @@ const bungeeHairline = Bungee_Hairline({
 	display: "swap",
 });
 
-// Loading text effect
+
 const LoadingPhrase = "ACTIVATING BANKAI...";
 
 // Matrix-style symbols, subtle
@@ -45,13 +45,13 @@ const MatrixEffect = () => {
 	);
 };
 
-// Progress bar with smooth fill-up effect
+
 const ProgressBar = () => {
 	const [progress, setProgress] = useState(0);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setProgress((prev) => Math.min(prev + 2.5, 100)); // Smooth increase
+			setProgress((prev) => Math.min(prev + 2.5, 100)); 
 		}, 50);
 
 		return () => clearInterval(interval);
@@ -72,7 +72,6 @@ const ProgressBar = () => {
 export default function LoadingScreen() {
 	const [displayText, setDisplayText] = useState("");
 
-	// Typewriter effect (clean and smooth)
 	useEffect(() => {
 		let index = 0;
 		const interval = setInterval(() => {
@@ -96,7 +95,7 @@ export default function LoadingScreen() {
 		>
 			<MatrixEffect />
 
-			{/* Loading Text with Cursor Effect */}
+	
 			<motion.h1
                 className={`${bungeeHairline.className} text-2xl md:text-3xl font-ptsans text-blue-400 font-extrabold tracking-wide text-center mb-5`}
 				initial={{ opacity: 0, y: 10 }}
@@ -113,7 +112,6 @@ export default function LoadingScreen() {
 				</motion.span>
 			</motion.h1>
 
-			{/* Smooth Progress Bar */}
 			<ProgressBar />
 		</motion.div>
 	);

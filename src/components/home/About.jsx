@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { sectionVariants } from "../shared/AnimationWrapper";
-
 export default function AboutSection({ aboutRef }) {
 	return (
 		<motion.section
@@ -9,71 +8,99 @@ export default function AboutSection({ aboutRef }) {
 			variants={sectionVariants}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: true }} // Animation triggers only once
-			className="hidden sm:block space-y-10 text-md text-justify"
+			viewport={{ once: true }}
+			className="hidden sm:block space-y-8 text-md text-justify"
 		>
+			{" "}
 			<motion.p
-				className=" leading-relaxed text-gray-400 max-w-3xl"
+				className="leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				viewport={{ once: true }} // Ensures this animation runs only once
+				viewport={{ once: true }}
 			>
-				I'm a{" "}
+				{" "}
+				Hey! I'm{" "}
 				<span className="text-blue-400 font-semibold">
-					full-stack developer
+					Computer Science undergrad
 				</span>{" "}
-				passionate about building scalable web applications that combine
-				technical excellence with intuitive user experiences. My expertise spans
-				the MERN stack, NextJS, and Python-based technologies, ensuring
-				solutions that are both robust and user-friendly.
-			</motion.p>
-
+				who loves building cool stuff with code.
+				<br /> From{" "}
+				<span className="text-blue-400 font-semibold">
+					full-stack web apps
+				</span>{" "}
+				to <span className="text-blue-400 font-semibold">AI-powered tools</span>
+				, I enjoy mixing creativity with tech.{" "}
+			</motion.p>{" "}
 			<motion.p
 				className="leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-				viewport={{ once: true }} // Ensures this animation runs only once
+				viewport={{ once: true }}
 			>
-				Currently, I'm specializing in{" "}
+				{" "}
+				I've worked with{" "}
 				<span className="text-blue-400 font-semibold">
-					IoT solutions and AI integration
-				</span>
-				, with notable projects like EcoBin's smart waste management system and
-				Mr. Montage, an AI-powered Valorant montage creator. My experience
-				includes real-time monitoring systems and digital twins, showcased in my
-				work for the SIH hackathon.
-			</motion.p>
-
-			<motion.p
-				className=" leading-relaxed text-gray-400 max-w-3xl"
+					{" "}
+					MERN, NextJS, and Flask{" "}
+				</span>{" "}
+				, and even got to showcase my projects at{" "}
+				<span className="text-blue-400 font-semibold">Buildspace SF Expo</span>.
+				I'm a{" "}
+				<span className="text-blue-400 font-semibold">hackathon finalist</span>{" "}
+				at SIH'23, Temethon'25, CodeFest'24, and more.{" "}
+			</motion.p>{" "}
+			<motion.div
+				className="leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-				viewport={{ once: true }} // Ensures this animation runs only once
+				viewport={{ once: true }}
 			>
-				My technical toolkit includes C/C++, Python, and Java for programming,
-				<span className="text-blue-400 font-semibold">
+				{" "}
+				<p className="mb-2">My technical toolkit includes:</p>{" "}
+				<ul className="list-disc list-inside pl-2 space-y-1">
 					{" "}
-					MERN stack and NextJS
-				</span>{" "}
-				for web development, and AWS for cloud solutions. I've successfully
-				applied these skills as a Full-Stack Intern at Blooming where I built
-				and deployed a complete e-commerce platform with an admin panel.
-			</motion.p>
-
+					<li>
+						Languages:{" "}
+						<span className="text-blue-400 font-semibold">
+							C/C++, Python, Java, TypeScript
+						</span>
+					</li>{" "}
+					<li>
+						{" "}
+						Web:{" "}
+						<span className="text-blue-400 font-semibold">
+							ReactJS, MongoDB, NodeJS, ExpressJS, NextJS, Flask, Tailwind
+						</span>
+					</li>
+					<li>
+						Cloud & DevOps:{" "}
+						<span className="text-blue-400 font-semibold">
+							AWS, Git/GitHub, GCP
+						</span>
+					</li>
+					<li>
+						Other Tools:{" "}
+						<span className="text-blue-400 font-semibold">
+							Docker, Firebase, PostgreSQL, YOLO
+						</span>
+					</li>
+				</ul>
+			</motion.div>
 			<motion.p
-				className=" leading-relaxed text-gray-400 max-w-3xl"
+				className="leading-relaxed text-gray-400 max-w-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
-				viewport={{ once: true }} // Ensures this animation runs only once
+				viewport={{ once: true }}
 			>
-				When I'm not coding, you'll find me participating in{" "}
-				<span className="text-blue-400 font-semibold">hackathons</span>,
-				exploring emerging technologies, or working on innovative solutions like
-				my personalized tourism itinerary planner.
+				Outside of coding, I'm passionate about{" "}
+				<span className="text-blue-400 font-semibold">
+					innovative solutions and digital transformation
+				</span>
+				, turning ideas into impactful, real-world applications.
 			</motion.p>
 		</motion.section>
 	);

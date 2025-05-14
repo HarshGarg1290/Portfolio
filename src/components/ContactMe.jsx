@@ -10,7 +10,7 @@ const ContactMe = () => {
 	const email = "harshgarg220104@gmail.com";
 	const [animatedEmail, setAnimatedEmail] = useState("");
 
-	// Collection of random symbols (Greek, Norse, etc.)
+
 	const symbols = [
 		"Ω",
 		"Δ",
@@ -32,7 +32,7 @@ const ContactMe = () => {
 		"⊕",
 	];
 
-	// Function to generate a scrambled version of the email
+
 	const scrambleEmail = (visibleLength) => {
 		return email
 			.split("")
@@ -51,7 +51,7 @@ const ContactMe = () => {
 			setAnimatedEmail(scrambleEmail(index));
 			index++;
 			if (index > totalSteps) clearInterval(interval);
-		}, 120); // Slightly slow effect for smooth animation
+		}, 100); 
 
 		return () => clearInterval(interval);
 	}, []);
@@ -88,7 +88,6 @@ const ContactMe = () => {
 			setSuccess(true);
 			setFormData({ name: "", email: "", message: "" });
 
-			// Auto-close modal after successful submission
 			setTimeout(() => {
 				setIsOpen(false);
 				setSuccess(null);
@@ -103,14 +102,14 @@ const ContactMe = () => {
 
 	return (
 		<div className="mt-10 flex flex-col text-white">
-			{/* Header */}
+		
 			<div className="flex flex-row gap-2 text-base sm:text-lg font-mono">
 				<MailPlus className="text-blue-400" />
 				<p>I'd love to hear from you.</p>
 			</div>
 
 			<p className="mt-2 text-blue-400 text-lg font-mono">{animatedEmail}</p>
-			{/* Open Modal Button */}
+	
 			<motion.button
 				className="mt-4 w-40 relative inline-flex items-center px-4 py-1 text-lg font-medium text-black transition-all duration-500 rounded-lg bg-white shadow-lg hover:shadow-blue-500/70"
 				whileHover={{ x: 20 }}
@@ -121,7 +120,7 @@ const ContactMe = () => {
 				Drop an Email
 			</motion.button>
 
-			{/* Modal */}
+		
 			{isOpen && (
 				<div
 					className="fixed top-0 left-0 w-full h-full flex items-center justify-center inset-0 z-50  bg-opacity-70 backdrop-blur-sm"
@@ -132,7 +131,7 @@ const ContactMe = () => {
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0.9 }}
 						transition={{ duration: 0.2 }}
-						className="bg-gray-900 text-white p-6 rounded-lg w-full max-w-md shadow-2xl border border-gray-800"
+						className="bg-black  text-white p-6 rounded-lg w-full max-w-md shadow-2xl border border-gray-800"
 						onClick={(e) => e.stopPropagation()}
 					>
 						<div className="flex justify-between items-center mb-6">

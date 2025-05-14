@@ -6,8 +6,15 @@ import { useEffect, useState } from "react";
 export default function Hero() {
 	const fullName = "Harsh Garg";
 	const [animatedName, setAnimatedName] = useState("");
+	const [displayText, setDisplayText] = useState("");
+	const [isDeleting, setIsDeleting] = useState(false);
+	const [phraseIndex, setPhraseIndex] = useState(0);
 
-	// Symbols for encoding effect (Greek, Norse, Unicode)
+	const phrases = ["Full Stack Developer", "Jaipur, India"];
+	const typingSpeed = 50;
+	const deletingSpeed = 50;
+	const pauseDelay = 2000;
+
 	const symbols = [
 		"H",
 		"a",
@@ -27,7 +34,7 @@ export default function Hero() {
 		"G",
 	];
 
-	// Function to gradually reveal the real name
+
 	const scrambleName = (visibleLength) => {
 		return fullName
 			.split("")
@@ -46,10 +53,42 @@ export default function Hero() {
 			setAnimatedName(scrambleName(index));
 			index++;
 			if (index > totalSteps) clearInterval(interval);
-		}, 200); // Controls the animation speed
+		}, 100);
 
 		return () => clearInterval(interval);
 	}, []);
+
+	useEffect(() => {
+		const currentPhrase = phrases[phraseIndex];
+		let timer;
+
+	
+		if (!isDeleting && displayText === currentPhrase) {
+			timer = setTimeout(() => {
+				setIsDeleting(true);
+			}, pauseDelay);
+		}
+
+		else {
+			timer = setTimeout(
+				() => {
+					if (!isDeleting) {
+						setDisplayText(currentPhrase.substring(0, displayText.length + 1));
+					} else {
+						setDisplayText(currentPhrase.substring(0, displayText.length - 1));
+
+						if (displayText.length === 0) {
+							setIsDeleting(false);
+							setPhraseIndex((phraseIndex + 1) % phrases.length);
+						}
+					}
+				},
+				isDeleting ? deletingSpeed : typingSpeed
+			);
+		}
+
+		return () => clearTimeout(timer);
+	}, [displayText, isDeleting, phraseIndex]);
 
 	return (
 		<div className="space-y-6 max-w-[500px] sm:pt-2">
@@ -63,7 +102,6 @@ export default function Hero() {
 					Hi, my name is
 				</motion.h5>
 
-				{/* Animated Name */}
 				<motion.h1
 					className="text-4xl md:text-6xl font-bold text-white flex items-center gap-3 font-mono"
 					initial={{ opacity: 0, y: 20 }}
@@ -75,22 +113,15 @@ export default function Hero() {
 			</div>
 
 			<motion.h2
-				className="text-xl md:text-2xl text-gray-200 font-mono"
+				className="text-xl md:text-2xl text-gray-200 font-mono flex items-center"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ delay: 0.3 }}
 			>
-				Full Stack Developer
+				<span>{displayText}</span>
+				<span className="animate-blink ml-0.5"></span>
 			</motion.h2>
-			<motion.p
-				className="text-base hidden sm:block md:text-lg text-gray-400"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ delay: 0.4 }}
-			>
-				Versatile full-stack developer with expertise in modern web frameworks,
-				data processing, and real-time analytics.
-			</motion.p>
+
 			<motion.p
 				className="text-base sm:hidden md:text-lg text-gray-300"
 				initial={{ opacity: 0 }}
@@ -100,10 +131,10 @@ export default function Hero() {
 				I'm a full-stack developer who blends logic with creativity to build
 				seamless, scalable, and innovative digital experiences. I thrive on
 				pushing boundaries in web development, AI, and IoT, solving complex
-				problems with smart solutions. When I’m not coding, I’m gaming, watching
+				problems with smart solutions. When I'm not coding, I'm gaming, watching
 				anime, or lost in a good book—because even developers need a great
 				story.
-				<br /> Let’s build something awesome—functional, impactful, and fun!
+				<br /> Let's build something awesome—functional, impactful, and fun!
 			</motion.p>
 		</div>
 	);
