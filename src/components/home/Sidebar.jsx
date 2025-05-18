@@ -17,7 +17,7 @@ export default function Sidebar({
 	useEffect(() => {
 		gsap.fromTo(
 			sidebarRef.current,
-			{ opacity: 0, x: -80 }, // Start from the left
+			{ opacity: 0, x: -80 },
 			{
 				opacity: 1,
 				x: 0,

@@ -17,9 +17,10 @@ export const socialLinks = [
 		label: "Instagram",
 	},
 	{
-		icon: <FileText className="w-6 h-6" />,
+		icon: <FileText className="w-5 h-5" />,
 		href: "/resume.pdf",
 		label: "Resume",
+		isResume: true,
 	},
 ];
 
