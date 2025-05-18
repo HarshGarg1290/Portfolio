@@ -63,16 +63,17 @@ export default function AboutSection({ aboutRef }) {
 				<ul className="list-disc list-inside pl-2 space-y-1">
 					{" "}
 					<li>
-						Languages:{" "}
+						Computer Languages:{" "}
 						<span className="text-blue-400 font-semibold">
-							C/C++, Python, Java, TypeScript
+							C/C++, Python, Java
 						</span>
 					</li>{" "}
 					<li>
 						{" "}
 						Web:{" "}
 						<span className="text-blue-400 font-semibold">
-							ReactJS, MongoDB, NodeJS, ExpressJS, NextJS, Flask, Tailwind
+							ReactJS, MongoDB, NodeJS, ExpressJS, NextJS, Flask, Tailwind,
+							Typescript
 						</span>
 					</li>
 					<li>
@@ -85,6 +86,12 @@ export default function AboutSection({ aboutRef }) {
 						Other Tools:{" "}
 						<span className="text-blue-400 font-semibold">
 							Docker, Firebase, PostgreSQL, YOLO
+						</span>
+					</li>
+					<li>
+						Human Languages:{" "}
+						<span className="text-blue-400 font-semibold">
+							Hindi , English , French(Intermediate)
 						</span>
 					</li>
 				</ul>

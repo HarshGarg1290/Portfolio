@@ -33,7 +33,7 @@ export const experiences = [
 	{
 		company: "Blooming",
 		role: "Full-Stack Intern",
-		period: "2024 - 2025",
+		period: "Nov'24 - Mar'25",
 		description: [
 			"Developed and deployed a full-stack e-commerce website with an admin panel.",
 			"Led the entire development lifecycle, ensuring scalability and seamless UX.",
@@ -42,9 +42,37 @@ export const experiences = [
 		tech: ["MERN", "Next.js", "AWS", "Tailwind", "PostgreSQL"],
 		link: "",
 	},
+	{
+		company: "Buildspace",
+		role: "Product Developer",
+		period: "June'24 - Aug'25",
+		description: [
+			"Developed an automated system that detects and compiles gameplay highlights into cinematic Valorant montages using YOLOv5 and MoviePy, significantly reducing manual editing time.",
+			"Invited to the Buildspace San Francisco Expo (Aug ’24) to present as one of the standout projects in the global cohort.",
+		],
+		tech: ["YOLO", "Python", "Flask", "MoviePy", "CUDA"],
+		link: "",
+	},
 ];
 
 export const projects = [
+	{
+		title: "Smart Ride Sharing",
+		description:
+			"Developed a full-stack carpooling platform connecting drivers with passengers. Implemented user verification, ride management, booking system, and real-time ride matching. Designed complete user flows from registration to ride completion with preferences filtering and payment processing.",
+		tech: [
+			"Next.js",
+			"Express.js",
+			"Prisma",
+			"PostgreSQL",
+			"Tailwind CSS",
+			"JWT",
+			"AWS S3",
+			"Vercel",
+		],
+		link: "https://github.com/HarshGarg1290/Inhouse",
+		image: "/ride-sharing.png",
+	},
 	{
 		title: "EcoBin",
 		description:
@@ -54,8 +82,9 @@ export const projects = [
 			"Python",
 			"Next.js",
 			"Node.js",
-			"Google Maps API",
+			"MapBox API",
 			"PostgreSQL",
+			"Typescript",
 		],
 		link: "https://github.com/aakashahpl/vimsicles",
 		image: "/ecobin.jpg",
@@ -64,7 +93,7 @@ export const projects = [
 		title: "Mr. Montage - AI-Powered Valorant Montage",
 		description:
 			"Developed an AI tool to generate Valorant montages using a YOLO-based object detection model trained on a custom dataset. Integrated a Flask-based web interface and Firebase database for seamless processing and storage.",
-		tech: ["YOLO", "Python", "Flask", "MoviePy", "Firebase"],
+		tech: ["YOLO", "Python", "Flask", "MoviePy", "CUDA"],
 		link: "https://github.com/HarshGarg1290/Mr.Montage",
 		image: "/mr.montage.png",
 	},
@@ -72,7 +101,7 @@ export const projects = [
 		title: "Digital Twin for Powerhouse - Real-Time System Monitoring",
 		description:
 			"Developed a digital twin web app for real-time monitoring of power-generation systems. Implemented ML-based anomaly detection for efficient system tracking. Qualified for SIH'23 internal hackathon.",
-		tech: ["Python", "Machine Learning", "React", "Flask"],
+		tech: ["Python", "Machine Learning", "ThreeJs", "Flask"],
 		link: "https://github.com/HarshGarg1290/SIH_INTERNAL-2023_DIGITAL_TWIN",
 		image: "/sih.png",
 	},
