@@ -131,10 +131,10 @@ export default function Hero() {
 				I'm a full-stack developer who blends logic with creativity to build
 				seamless, scalable, and innovative digital experiences. I thrive on
 				pushing boundaries in web development, AI, and IoT, solving complex
-				problems with smart solutions. When I'm not coding, I'm gaming, watching
-				anime, or lost in a good book—because even developers need a great
+				problems with smart solutions.<br/> When I'm not coding, I'm gaming, watching
+				anime, or lost in a good book because even developers need a great
 				story.
-				<br /> Let's build something awesome—functional, impactful, and fun!
+				<br /> Let's build something awesome, functional, impactful, and fun!
 			</motion.p>
 		</div>
 	);
