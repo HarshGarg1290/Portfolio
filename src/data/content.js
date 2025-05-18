@@ -46,9 +46,9 @@ export const experiences = [
 	{
 		company: "Buildspace",
 		role: "Product Developer",
-		period: "June'24 - Aug'25",
+		period: "Jun'24 - Aug'25",
 		description: [
-			"Developed an automated system that detects and compiles gameplay highlights into cinematic Valorant montages using YOLOv5 and MoviePy, significantly reducing manual editing time.",
+			"Built an AI-powered system with YOLOv5 and MoviePy to auto-generate cinematic Valorant montages from gameplay footage.",
 			"Invited to the Buildspace San Francisco Expo (Aug ’24) to present as one of the standout projects in the global cohort.",
 		],
 		tech: ["YOLO", "Python", "Flask", "MoviePy", "CUDA"],
@@ -93,7 +93,7 @@ export const projects = [
 	{
 		title: "Mr. Montage - AI-Powered Valorant Montage",
 		description:
-			"Developed an AI tool to generate Valorant montages using a YOLO-based object detection model trained on a custom dataset. Integrated a Flask-based web interface and Firebase database for seamless processing and storage.",
+			"Developed an AI tool to generate Valorant montages using a YOLO-based object detection model trained on a custom dataset. Integrated a Flask-based web interface for user interaction. The tool automates the process of creating cinematic montages from gameplay footage, enhancing the gaming experience.",
 		tech: ["YOLO", "Python", "Flask", "MoviePy", "CUDA"],
 		link: "https://github.com/HarshGarg1290/Mr.Montage",
 		image: "/mr.montage.png",

@@ -7,13 +7,14 @@ export default function ExperienceCard({
 	link,
 }) {
 	return (
-		<div className="group relative border border-gray-800 p-6 rounded-lg hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">
-			<div className="flex justify-between items-start mb-4">
-				<div>
+		<div className="group relative border border-gray-800 p-4 rounded-lg hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">
+			<div className="flex flex-col  justify-center  mb-4">
+				<div className="flex justify-between items-center mb-2">
 					<h3 className="text-xl font-semibold text-white">{role}</h3>
-					<p className="text-blue-400">{company}</p>
+					<span className="text-gray-500">{period}</span>
 				</div>
-				<span className="text-gray-500">{period}</span>
+
+				<p className="text-blue-400">{company}</p>
 			</div>
 			<ul className="space-y-2 mb-4">
 				{description.map((point, i) => (
