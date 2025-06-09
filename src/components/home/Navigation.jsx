@@ -32,12 +32,19 @@ export default function Navigation({
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	useEffect(() => {
-		// Wait for dot to reach new position before expanding
+	
 		const timeout = setTimeout(() => setIsExpanded(true), 300);
-
+		console.log(activeSection);
+		console.log(
+			"navItems:",
+			navItems.map((item) => ({
+				label: item.label,
+				lowercase: item.label.toLowerCase(),
+			}))
+		);
 		return () => {
 			clearTimeout(timeout);
-			setIsExpanded(false); // Reset before transitioning
+			setIsExpanded(false); 
 		};
 	}, [activeSection]);
 
@@ -57,6 +64,8 @@ export default function Navigation({
 						className="flex flex-row items-center gap-4"
 					>
 						{activeSection === item.label.toLowerCase() && (
+						
+							
 							<motion.span
 								className="bg-blue-400"
 								layoutId="activeSection"
@@ -76,7 +85,7 @@ export default function Navigation({
 							href={item.href}
 							onClick={(e) => {
 								handleNavClick(e, item.href.slice(1));
-								setIsExpanded(false); // Shrink before movement
+								setIsExpanded(false);
 							}}
 							className={`block text-sm relative transition-all ${
 								activeSection === item.label.toLowerCase()

@@ -10,7 +10,7 @@ export default function ProjectsSection({ projectsRef, projects }) {
 			variants={sectionVariants}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: false, amount: 0.2 }}
+			viewport={{ once: true }}
 			className="space-y-4"
 		>
 			<h2

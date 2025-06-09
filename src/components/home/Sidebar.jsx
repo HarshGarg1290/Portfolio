@@ -21,8 +21,8 @@ export default function Sidebar({
 			{
 				opacity: 1,
 				x: 0,
-				duration: 1, // Smooth entrance
-				ease: "power3.out", // Natural movement
+				duration: 1,
+				ease: "power3.out",
 			}
 		);
 

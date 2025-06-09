@@ -17,14 +17,25 @@ export default function Home() {
 	const [isLoading, setIsLoading] = useState(true); // ✅ Loading state
 	const lenis = useLenis();
 
-	const observerOptions = {
-		threshold: 0.5,
-		triggerOnce: false,
-	};
 
-	const [aboutRef, aboutInView] = useInView(observerOptions);
-	const [experienceRef, experienceInView] = useInView(observerOptions);
-	const [projectsRef, projectsInView] = useInView(observerOptions);
+
+	const [aboutRef, aboutInView] = useInView({
+    threshold: 0.5, 
+    triggerOnce: false,
+    rootMargin: "-50px 0px -50px 0px"
+});
+
+const [experienceRef, experienceInView] = useInView({
+    threshold: 0.5, 
+    triggerOnce: false,
+    rootMargin: "-50px 0px -50px 0px"
+});
+
+const [projectsRef, projectsInView] = useInView({
+    threshold: 0.2, 
+    triggerOnce: false,
+    rootMargin: "-50px 0px -50px 0px"
+});
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {

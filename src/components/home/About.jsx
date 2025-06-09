@@ -45,7 +45,7 @@ export default function AboutSection({ aboutRef }) {
 					{" "}
 					MERN, NextJS, and Flask{" "}
 				</span>{" "}
-				, and even got to showcase my projects at{" "}
+				, and even got invited to showcase my projects at{" "}
 				<span className="text-blue-400 font-semibold">Buildspace SF Expo</span>.
 				I'm a{" "}
 				<span className="text-blue-400 font-semibold">hackathon finalist</span>{" "}
