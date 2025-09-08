@@ -58,6 +58,23 @@ export const experiences = [
 
 export const projects = [
 	{
+		title: "Homiee",
+		description:
+			"Developed an AI-driven platform that recommends flatmates, rentals, and local services with high predictive accuracy. Integrated a Gradient Boosting model into a Flask–Next.js architecture to enable real-time compatibility scoring across 28 lifestyle metrics. Designed and deployed a scalable, mobile-responsive interface with advanced filtering options via Vercel and Railway.",
+		tech: [
+			"Next.js",
+			"Express.js",
+			"Prisma",
+			"PostgreSQL",
+			"Tailwind CSS",
+			"Machine Learning",
+			"Flask",
+			"Railway",
+		],
+		link: "https://homiee-five.vercel.app/",
+		image: "/homiee.png",
+	},
+	{
 		title: "Smart Ride Sharing",
 		description:
 			"Developed a full-stack carpooling platform connecting drivers with passengers. Implemented user verification, ride management, booking system, and real-time ride matching. Designed complete user flows from registration to ride completion with preferences filtering and payment processing.",
