@@ -63,35 +63,36 @@ export default function AboutSection({ aboutRef }) {
 				<ul className="list-disc list-inside pl-2 space-y-1">
 					{" "}
 					<li>
-						Computer Languages:{" "}
+						Languages:{" "}
 						<span className="text-blue-400 font-semibold">
-							C/C++, Python, Java
+							C/C++, Python, Java, JavaScript, TypeScript
 						</span>
 					</li>{" "}
 					<li>
 						{" "}
-						Web:{" "}
+						Frameworks & Libraries:{" "}
 						<span className="text-blue-400 font-semibold">
-							ReactJS, MongoDB, NodeJS, ExpressJS, NextJS, Flask, Tailwind,
-							Typescript
+							React.js, Next.js, Node.js, Express.js, Flask, Tailwind, Prisma,
+							Three.js
 						</span>
 					</li>
 					<li>
-						Cloud & DevOps:{" "}
+						Databases:{" "}
 						<span className="text-blue-400 font-semibold">
-							AWS, Git/GitHub, GCP
+							MongoDB, MySQL, PostgreSQL
 						</span>
 					</li>
 					<li>
-						Other Tools:{" "}
+						Tools & Cloud:{" "}
 						<span className="text-blue-400 font-semibold">
-							Docker, Firebase, PostgreSQL, YOLO
+							Docker, Terraform, Firebase, AWS, Vercel, Render, OAuth, JWT,
+							YOLO, CUDA, MoviePy
 						</span>
 					</li>
 					<li>
 						Human Languages:{" "}
 						<span className="text-blue-400 font-semibold">
-							Hindi , English , French(Intermediate)
+							Hindi, English, French(Intermediate)
 						</span>
 					</li>
 				</ul>
